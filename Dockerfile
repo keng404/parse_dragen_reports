@@ -15,7 +15,7 @@ RUN apt-get install -y libfontconfig1-dev libffi-dev  libharfbuzz-dev libfribidi
 ENV PYTHON_VERSION 3.9.6
 ENV PATH ${SCRIPT_DIR}/Python-${PYTHON_VERSION}:${PATH}
 ENV PYTHONPATH ${SCRIPT_DIR}/Python-${PYTHON_VERSION}/Lib/
-RUN wget -O ${SCRIPT_DIR}/Python-3.9.6.tgz "https://www.python.org/ftp/python/${PYTHON_VERSION}/Python-${PYTHON_VERSION}.tgz" && \
+RUN wget -O ${SCRIPT_DIR}/Python-${PYTHON_VERSION}.tgz "https://www.python.org/ftp/python/${PYTHON_VERSION}/Python-${PYTHON_VERSION}.tgz" && \
     apt-get install tar && \
     tar -xvf Python-${PYTHON_VERSION}.tgz && \
     cd ${SCRIPT_DIR}/Python-${PYTHON_VERSION} && \
